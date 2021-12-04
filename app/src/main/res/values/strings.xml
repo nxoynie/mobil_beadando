@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calorie Intake Tracker</string>
+    <string name="past_intakes">"Korábbi étkezések: "</string>
+    <string name="food_name">Food Name</string>
+    <string name="food_calorie">Food Calorie</string>
+    <string name="foodtime" />
+    <string name="cancel_button_text">Cancel</string>
+    <string name="ok_button_text">OK</string>
+    <string name="delete_button_text">Delete</string>
+    <string name="back_button_text">Back</string>
+</resources>

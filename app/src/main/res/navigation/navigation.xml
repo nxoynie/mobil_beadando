@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/calorieIntakeTracker">
+    <fragment
+        android:id="@+id/calorieIntakeTracker"
+        android:name="com.example.calorieintaketracker.calorieintaketracker.CalorieIntakeTrackerFragment"
+        android:label="CalorieIntakeTracker" >
+        <action
+            android:id="@+id/action_calorieIntakeTracker_to_newIntakeFragment"
+            app:destination="@id/newIntakeFragment" />
+        <action
+            android:id="@+id/action_calorieIntakeTracker_to_intakeViewerFragment"
+            app:destination="@id/intakeViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newIntakeFragment"
+        android:name="com.example.calorieintaketracker.newintake.NewIntakeFragment"
+        android:label="NewIntakeFragment" >
+        <action
+            android:id="@+id/action_newIntakeFragment_to_calorieIntakeTracker"
+            app:destination="@id/calorieIntakeTracker" />
+    </fragment>
+    <fragment
+        android:id="@+id/intakeViewerFragment"
+        android:name="com.example.calorieintaketracker.intakeviewer.IntakeViewerFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_intake_viewer" >
+        <action
+            android:id="@+id/action_intakeViewerFragment_to_calorieIntakeTracker"
+            app:destination="@id/calorieIntakeTracker" />
+        <argument
+            android:name="foodID"
+            app:argType="long" />
+    </fragment>
+</navigation>
