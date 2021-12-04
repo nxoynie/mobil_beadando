@@ -1,9 +1,12 @@
 package com.example.calorieintaketracker.newintake
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -55,9 +58,22 @@ class NewIntakeFragment: Fragment() {
             val foodTime = binding.foodtime.selectedItem as FoodTime
 
             newIntakeViewModel.onOk(name, calorie, foodTime)
+            hideKeyboard()
+
         }
 
         return binding.root
 
+
+
+    }
+
+    private fun Fragment.hideKeyboard() {
+        view?.let { activity?.hideKeyboard(it) }
+    }
+
+    private fun Context.hideKeyboard(view: View) {
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }

@@ -85,5 +85,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
 
+    implementation 'com.jayway.jsonpath:json-path:2.6.0'
+
     // https://mvnrepository.com/artifact/com.jayway.jsonpath/
 }

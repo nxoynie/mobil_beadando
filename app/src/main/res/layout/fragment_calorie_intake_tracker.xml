@@ -42,10 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
             android:onClick="@{() -> calorieIntakeTrackerViewModel.onNew()}"
+            android:text="new"
             app:layout_constraintBaseline_toBaselineOf="@id/clear_button"
             app:layout_constraintEnd_toStartOf="@+id/clear_button"
             app:layout_constraintHorizontal_chainStyle="spread"
-            android:text="new"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -83,6 +83,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/number_of_intakes"
             app:layout_constraintVertical_bias="0.868" />
+
 
 
         <!-- With data binding and LiveData, we can track the buttons' visibility states

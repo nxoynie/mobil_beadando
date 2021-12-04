@@ -47,6 +47,7 @@ class CalorieIntakeTrackerFragment : Fragment(){
         })
         binding.intakeList.adapter = adapter
 
+
         calorieIntakeTrackerViewModel.intakes.observe(viewLifecycleOwner, {
             it?.let {
                 adapter.addHeaderSubmitList(it)
@@ -83,13 +84,4 @@ class CalorieIntakeTrackerFragment : Fragment(){
 
         return binding.root
     }
-
-        private fun Fragment.hideKeyboard() {
-            view?.let { activity?.hideKeyboard(it) }
-        }
-
-        private fun Context.hideKeyboard(view: View) {
-            val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
-        }
 }

@@ -24,7 +24,7 @@ fun TextView.setTodoTitleFormatted(item: CalorieIntake) {
 
 @BindingAdapter("quantityString")
 fun TextView.setIntakeQuantityFormatted(item: CalorieIntake) {
-    val concatenatedString = "${item.intakeQuantity} kalória fogyasztva"
+    val concatenatedString = "${item.name} ${item.foodTime} ${item.intakeQuantity} kalória fogyasztva"
     text = concatenatedString
 }
 
